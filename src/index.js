@@ -7,19 +7,19 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
 import { rootReducer } from './reducers/index'
 import './index.css';
-import App from './App';
+import App from './containers/App';
 
 const store = createStore(
-	rootReducer,
-	composeWithDevTools(applyMiddleware(thunk))
+  rootReducer,
+  composeWithDevTools(applyMiddleware(thunk))
 )
 
 const app =
-	<Provider store={store}>
-		<BrowserRouter>
-			<App />
-		</BrowserRouter>
-	</Provider>
+  <Provider store={store}>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </Provider>
 
 ReactDOM.render(app, document.getElementById('root'));
 

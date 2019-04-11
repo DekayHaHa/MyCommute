@@ -2,19 +2,18 @@ import React, { Component } from 'react';
 // import { Route, Switch } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { getUser } from './thunks/getUser'
-import './App.css';
+import { getUser } from '../thunks/getUser'
 
-export class App extends Component {
+export class Login extends Component {
 
   fetchData = () => {
-    this.props.getUser()
+    this.props.getUser('David', 'twelve')
   }
 
   render() {
     const { user } = this.props
     return (
-      <div className="App">
+      <div>
         {user.id && <h2>{user.userName}</h2>}
         <button onClick={this.fetchData}>get faux data</button>
       </div>
@@ -22,7 +21,7 @@ export class App extends Component {
   }
 }
 
-App.propTypes = {
+Login.propTypes = {
   user: PropTypes.object,
   signinUser: PropTypes.func
 };
@@ -35,4 +34,4 @@ export const mapStateToProps = store => ({
   user: store.user
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(Login);
