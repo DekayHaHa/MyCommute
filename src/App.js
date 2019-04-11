@@ -3,7 +3,7 @@ import './App.css';
 
 class App extends Component {
   fetchData = () => {
-    this.props.getUser()
+    this.props.signinUser()
   }
   render() {
     return (
