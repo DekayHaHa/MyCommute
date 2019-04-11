@@ -5,7 +5,7 @@ export const signinUser = (user) => ({
 
 export const hasError = (error) => ({
   type: 'HAS_ERROR',
-  error
+  error: error
 })
 
 export const updatePreferences = (pref) => ({

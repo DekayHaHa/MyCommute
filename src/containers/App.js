@@ -4,13 +4,18 @@ import Login from './Login'
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getUser } from '../thunks/getUser'
+import Header from './Header'
 
 export class App extends Component {
 
   render() {
     return (
       <div className="App">
-        <Route path='/' component={Login} />
+        <Route to='/' component={Header} />
+        <Switch>
+          <Route exact path='/login' component={Login} />
+
+        </Switch>
       </div>
     );
   }

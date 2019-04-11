@@ -6,7 +6,7 @@ export const getUser = (name, pass) => {
     const optObj = {
       method: 'POST',
       body: JSON.stringify({ name, pass }),
-
+      headers: { "Content-Type": "application/json" }
     }
     try {
       const response = await fetch('http://localhost:3001/user', optObj);
@@ -17,6 +17,7 @@ export const getUser = (name, pass) => {
       await dispatch(signinUser(data));
       await dispatch(getUserPreferences(data.id))
     } catch (error) {
+      console.log(error)
       dispatch(hasError(error.message));
     }
   }
