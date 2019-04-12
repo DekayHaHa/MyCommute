@@ -6,7 +6,9 @@ import { connect } from 'react-redux';
 import { getUser } from '../thunks/getUser'
 import Header from './Header'
 import NewUser from './NewUser'
-import User from './User'
+import UserCommutes from './UserCommutes'
+import { UserWeather } from './UserWeather'
+import { UserPreferences } from './UserPreferences'
 
 export class App extends Component {
 
@@ -17,7 +19,9 @@ export class App extends Component {
         {/* {user.id && this.getUserWeather()} */}
         <Route to='/' component={Header} />
         <Route exact path='/login' component={Login} />
-        <Route exact path='/user/:id' component={User} />
+        <Route exact path={`/user/${user.id}/commutes`} component={UserCommutes} />
+        <Route exact path={`/user/${user.id}/preferences`} component={UserPreferences} />
+        <Route exact path={`/user/${user.id}/weather`} component={UserWeather} />
         {/* <Route exact path='/newUser' component={NewUser} /> */}
         <Switch>
         </Switch>

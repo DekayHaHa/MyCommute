@@ -1,9 +1,9 @@
 import { hasError, updatePreferences } from '../actions';
-import { key } from '../key'
-export const getWeather = (user) => {
+
+export const getUserCommutes = (id) => {
   return async (dispatch) => {
     try {
-      const response = await fetch(`https://www.zipcodeapi.com/rest/${key}/info.json/${user.zip}/degrees`);
+      const response = await fetch('http://localhost:3001/user/commutes');
       if (!response.ok) {
         throw Error(response.statusText);
       }

@@ -30,7 +30,7 @@ export class Login extends Component {
     const { userName, password } = this.state
     return (
       <div>
-        {user.id && <Redirect to='/' />}
+        {user.id && <Redirect to={`/user/${user.id}/commutes`} />}
         <form onSubmit={this.handleSubmit}>
           <input
             name='userName'

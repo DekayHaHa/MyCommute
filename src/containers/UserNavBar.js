@@ -1,23 +1,29 @@
 import React, { Component } from 'react';
 // import { Route, Switch } from 'react-router-dom';
-import { Link, Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getUser } from '../thunks/getUser'
 
-export class User extends Component {
+export class UserNavBar extends Component {
 
+  componentDidMount() {
+
+  }
 
   render() {
+    const { user } = this.props
     return (
       <nav>
-
+        <Link to={`/user/${user.id}/preferences`}>Preferences</Link>
+        <Link to={`/user/${user.id}/commutes`}>Commutes</Link>
+        <Link to={`/user/${user.id}/weather`}>Your Weather</Link>
       </nav>
     );
   }
 }
 
-User.propTypes = {
+UserNavBar.propTypes = {
   user: PropTypes.object,
   signinUser: PropTypes.func
 };
@@ -31,4 +37,4 @@ export const mapStateToProps = store => ({
   error: store.error
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(User);
+export default connect(mapStateToProps, mapDispatchToProps)(UserNavBar);

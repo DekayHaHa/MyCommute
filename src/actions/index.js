@@ -9,6 +9,11 @@ export const hasError = (error) => ({
 })
 
 export const updatePreferences = (pref) => ({
-  type: 'GET_PREFERENCES',
+  type: 'UPDATE_PREFERENCES',
   pref
+})
+
+export const updateWeather = (weather) => ({
+  type: 'UPDATE_WEATHER',
+  weather
 })
