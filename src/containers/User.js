@@ -5,21 +5,19 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getUser } from '../thunks/getUser'
 
-export class Login extends Component {
+export class User extends Component {
 
 
   render() {
     return (
-      <div className='header'>
-        <h1 className='title' >MyCommute</h1>
-        <Link to='/login'>LOGIN USER</Link>
-        {/* <Link to='/newUser'>NEW USER</Link> */}
-      </div>
+      <nav>
+
+      </nav>
     );
   }
 }
 
-Login.propTypes = {
+User.propTypes = {
   user: PropTypes.object,
   signinUser: PropTypes.func
 };
@@ -33,4 +31,4 @@ export const mapStateToProps = store => ({
   error: store.error
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Login);
+export default connect(mapStateToProps, mapDispatchToProps)(User);
