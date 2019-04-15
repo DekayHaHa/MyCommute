@@ -2,13 +2,8 @@ import { hasError, updateWeather } from '../actions';
 
 export const getUserWeather = (id) => {
   return async (dispatch) => {
-    const optObj = {
-      method: 'GET',
-      body: JSON.stringify(id),
-      headers: { "Content-Type": "application/json" }
-    }
     try {
-      const response = await fetch('http://localhost:3001/user/weather', optObj);
+      const response = await fetch(`http://localhost:3001/api/user/weather/${id}`);
       if (!response.ok) {
         throw Error(response.statusText);
       }

@@ -3,7 +3,7 @@ import { hasError, updatePreferences } from '../actions';
 export const getUserPreferences = (id) => {
   return async (dispatch) => {
     try {
-      const response = await fetch('http://localhost:3001/user/preferences/');
+      const response = await fetch(`http://localhost:3001/api/user/preferences/${id}`);
       if (!response.ok) {
         throw Error(response.statusText);
       }

@@ -10,11 +10,15 @@ export class Login extends Component {
 
 
   render() {
-    const { user } = this.props
+    const { user, currentWeather } = this.props
     return (
       <div className='header'>
+        {!user.id && <Link to='/login'>LOGIN USER</Link>}
         <h1 className='title' >MyCommute</h1>
-        <Link to='/login'>LOGIN USER</Link>
+        {currentWeather && <div>
+          <p>{currentWeather.summary}</p>
+          <p>{currentWeather.temperature} F°</p>
+        </div>}
         <Route path={`/user/${user.id}`} component={UserNavBar} />
       </div>
     );
@@ -32,7 +36,8 @@ export const mapDispatchToProps = (dispatch) => ({
 
 export const mapStateToProps = store => ({
   user: store.user,
-  error: store.error
+  error: store.error,
+  currentWeather: store.weather.current
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Login);

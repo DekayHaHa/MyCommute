@@ -17,3 +17,8 @@ export const updateWeather = (weather) => ({
   type: 'UPDATE_WEATHER',
   weather
 })
+
+export const updateCommutes = (commutes) => ({
+  type: 'UPDATE_COMMUTES',
+  commutes
+})

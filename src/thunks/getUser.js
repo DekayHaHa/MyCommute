@@ -11,7 +11,8 @@ export const getUser = (name, pass) => {
       headers: { "Content-Type": "application/json" }
     }
     try {
-      const response = await fetch('http://localhost:3001/user', optObj);
+      // isLoading
+      const response = await fetch('http://localhost:3001/api/user', optObj);
       if (!response.ok) {
         throw Error(response.statusText);
       }
@@ -20,6 +21,7 @@ export const getUser = (name, pass) => {
       await dispatch(getUserPreferences(data.id))
       await dispatch(getUserWeather(data.id))
       await dispatch(getUserCommutes(data.id))
+      // isLoading
     } catch (error) {
       console.log(error)
       dispatch(hasError(error.message));
