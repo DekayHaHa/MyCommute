@@ -3,11 +3,6 @@ export const signinUser = (user) => ({
   user
 })
 
-export const hasError = (error) => ({
-  type: 'HAS_ERROR',
-  error
-})
-
 export const updatePreferences = (pref) => ({
   type: 'UPDATE_PREFERENCES',
   pref
@@ -26,4 +21,11 @@ export const updateCommutes = (commutes) => ({
 export const isLoading = (isLoading) => ({
   type: 'IS_LOADING',
   isLoading
+	type: 'SIGNIN_USER',
+  user
+})
+
+export const hasError = (error) => ({
+  type: 'HAS_ERROR',
+  error
 })
