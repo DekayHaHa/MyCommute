@@ -23,7 +23,6 @@ export const getUser = (name, pass) => {
       await dispatch(getUserCommutes(data.id))
       // isLoading
     } catch (error) {
-      console.log(error)
       dispatch(hasError(error.message));
     }
   }

@@ -5,7 +5,7 @@ export const signinUser = (user) => ({
 
 export const hasError = (error) => ({
   type: 'HAS_ERROR',
-  error: error
+  error
 })
 
 export const updatePreferences = (pref) => ({
@@ -21,4 +21,9 @@ export const updateWeather = (weather) => ({
 export const updateCommutes = (commutes) => ({
   type: 'UPDATE_COMMUTES',
   commutes
+})
+
+export const isLoading = (isLoading) => ({
+  type: 'IS_LOADING',
+  isLoading
 })

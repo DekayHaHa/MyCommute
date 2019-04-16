@@ -7,13 +7,11 @@ import { getUser } from '../thunks/getUser'
 import UserNavBar from './UserNavBar'
 import moment from 'moment';
 
-export class Login extends Component {
-
+export class Header extends Component {
 
   render() {
     const { user, currentWeather } = this.props
     let time = currentWeather ? moment.unix(currentWeather.time).format('LT') : null;
-    console.log(time)
     return (
       <div className='header'>
         <h1 className='title' >MyCommute</h1>
@@ -35,7 +33,7 @@ export class Login extends Component {
   }
 }
 
-Login.propTypes = {
+Header.propTypes = {
   user: PropTypes.object,
   signinUser: PropTypes.func
 };
@@ -50,4 +48,4 @@ export const mapStateToProps = store => ({
   currentWeather: store.weather.current
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Login);
+export default connect(mapStateToProps, mapDispatchToProps)(Header);
