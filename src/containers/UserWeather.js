@@ -6,11 +6,14 @@ import { getUserWeather } from '../thunks/getUserWeather'
 
 export class UserWeather extends Component {
   render() {
-    const { weather, getUserWeather, user } = this.props
-    // if (!weather) getUserWeather(user.id)
+    const { weather } = this.props
     return (
       <div>
-        <h3>I'm Weather</h3>
+        <h3>Today's Weather: {weather.summary}</h3>
+        <p>Temperature range from {weather.tempLow} to {weather.tempHigh}</p>
+        <p>Average wind speed of {weather.avgWind}MPH, with gusts up to {weather.gusts}MPH</p>
+        <p>{weather.precipChance}% of {weather.precipType}</p>
+        <p>Humidity Index of {weather.humidity} (0 to 1)</p>
       </div>
     )
   }
@@ -25,9 +28,9 @@ export const mapDispatchToProps = dispatch => ({
   getUserWeather: (id) => dispatch(getUserWeather(id))
 })
 
-export const mapStateToProps = store => ({
-  user: store.user,
-  weather: store.weather
+export const mapStateToProps = state => ({
+  user: state.user,
+  weather: state.weather.today
 });
 
-export default connect(mapStateToProps)(UserWeather);
+export default connect(mapStateToProps, mapDispatchToProps)(UserWeather);

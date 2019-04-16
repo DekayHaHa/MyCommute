@@ -5,10 +5,10 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getUser } from '../thunks/getUser'
 import Header from './Header'
-import NewUser from './NewUser'
+// import NewUser from './NewUser'
 import UserCommutes from './UserCommutes'
-import { UserWeather } from './UserWeather'
-import { UserPreferences } from './UserPreferences'
+import UserWeather from './UserWeather'
+import UserPreferences from './UserPreferences'
 
 export class App extends Component {
 
