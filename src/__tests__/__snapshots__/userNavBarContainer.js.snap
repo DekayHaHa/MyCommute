@@ -1,0 +1,179 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserNavBar should match the snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <UserNavBar
+    user={
+      Object {
+        "id": 1,
+        "userName": "mahk",
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <Link
+          to="/user/1/preferences"
+        >
+          Preferences
+        </Link>,
+        <Link
+          to="/user/1/commutes"
+        >
+          Commutes
+        </Link>,
+        <Link
+          to="/user/1/weather"
+        >
+          Your Weather
+        </Link>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": "Preferences",
+          "to": "/user/1/preferences",
+        },
+        "ref": null,
+        "rendered": "Preferences",
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": "Commutes",
+          "to": "/user/1/commutes",
+        },
+        "ref": null,
+        "rendered": "Commutes",
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": "Your Weather",
+          "to": "/user/1/weather",
+        },
+        "ref": null,
+        "rendered": "Your Weather",
+        "type": [Function],
+      },
+    ],
+    "type": "nav",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Link
+            to="/user/1/preferences"
+          >
+            Preferences
+          </Link>,
+          <Link
+            to="/user/1/commutes"
+          >
+            Commutes
+          </Link>,
+          <Link
+            to="/user/1/weather"
+          >
+            Your Weather
+          </Link>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": "Preferences",
+            "to": "/user/1/preferences",
+          },
+          "ref": null,
+          "rendered": "Preferences",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": "Commutes",
+            "to": "/user/1/commutes",
+          },
+          "ref": null,
+          "rendered": "Commutes",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": "Your Weather",
+            "to": "/user/1/weather",
+          },
+          "ref": null,
+          "rendered": "Your Weather",
+          "type": [Function],
+        },
+      ],
+      "type": "nav",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromError": true,
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+  Symbol(enzyme.__childContext__): null,
+}
+`;
