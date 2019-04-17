@@ -118,7 +118,8 @@ export class NewUser extends Component {
 
 NewUser.propTypes = {
   user: PropTypes.object,
-  signinUser: PropTypes.func
+  createUser: PropTypes.func,
+  error: PropTypes.string
 };
 
 export const mapDispatchToProps = (dispatch) => ({

@@ -12,7 +12,9 @@ ShallowWrapper {
     }
     weather={
       Object {
-        "summary": "im weather",
+        "today": Object {
+          "summary": "im weather",
+        },
       }
     }
   />,
@@ -52,6 +54,7 @@ ShallowWrapper {
            (0 to 1)
         </p>,
       ],
+      "className": "card-object",
     },
     "ref": null,
     "rendered": Array [
@@ -185,6 +188,7 @@ ShallowWrapper {
              (0 to 1)
           </p>,
         ],
+        "className": "card-object",
       },
       "ref": null,
       "rendered": Array [

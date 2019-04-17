@@ -3,11 +3,29 @@
 exports[`userCommutes should match the snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <userCommutes
+  Symbol(enzyme.__unrendered__): <UserCommutes
+    commutes={
+      Object {
+        "id": 1,
+        "tram": Object {},
+      }
+    }
+    pref={
+      Object {
+        "id": 1,
+        "morning": "0800",
+      }
+    }
     user={
       Object {
         "id": 1,
         "userName": "mahk",
+      }
+    }
+    weather={
+      Object {
+        "current": Object {},
+        "today": Object {},
       }
     }
   />,
@@ -25,14 +43,30 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "user": Object {
-        "id": 1,
-        "userName": "mahk",
-      },
+      "children": Array [
+        <Commute
+          pri={10}
+          title="tram"
+        />,
+      ],
+      "className": "container",
     },
     "ref": null,
-    "rendered": null,
-    "type": "userCommutes",
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": "tram",
+        "nodeType": "function",
+        "props": Object {
+          "pri": 10,
+          "title": "tram",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
@@ -40,14 +74,30 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "user": Object {
-          "id": 1,
-          "userName": "mahk",
-        },
+        "children": Array [
+          <Commute
+            pri={10}
+            title="tram"
+          />,
+        ],
+        "className": "container",
       },
       "ref": null,
-      "rendered": null,
-      "type": "userCommutes",
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": "tram",
+          "nodeType": "function",
+          "props": Object {
+            "pri": 10,
+            "title": "tram",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
     },
   ],
   Symbol(enzyme.__options__): Object {
@@ -74,5 +124,6 @@ ShallowWrapper {
       },
     },
   },
+  Symbol(enzyme.__childContext__): null,
 }
 `;

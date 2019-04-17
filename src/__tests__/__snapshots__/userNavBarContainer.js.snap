@@ -26,21 +26,24 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <Link
+        <NavLink
+          className="nav-button"
           to="/user/1/preferences"
         >
           Preferences
-        </Link>,
-        <Link
+        </NavLink>,
+        <NavLink
+          className="nav-button"
           to="/user/1/commutes"
         >
           Commutes
-        </Link>,
-        <Link
+        </NavLink>,
+        <NavLink
+          className="nav-button"
           to="/user/1/weather"
         >
           Your Weather
-        </Link>,
+        </NavLink>,
       ],
     },
     "ref": null,
@@ -48,9 +51,10 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "class",
+        "nodeType": "function",
         "props": Object {
           "children": "Preferences",
+          "className": "nav-button",
           "to": "/user/1/preferences",
         },
         "ref": null,
@@ -60,9 +64,10 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "class",
+        "nodeType": "function",
         "props": Object {
           "children": "Commutes",
+          "className": "nav-button",
           "to": "/user/1/commutes",
         },
         "ref": null,
@@ -72,9 +77,10 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "class",
+        "nodeType": "function",
         "props": Object {
           "children": "Your Weather",
+          "className": "nav-button",
           "to": "/user/1/weather",
         },
         "ref": null,
@@ -91,21 +97,24 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <Link
+          <NavLink
+            className="nav-button"
             to="/user/1/preferences"
           >
             Preferences
-          </Link>,
-          <Link
+          </NavLink>,
+          <NavLink
+            className="nav-button"
             to="/user/1/commutes"
           >
             Commutes
-          </Link>,
-          <Link
+          </NavLink>,
+          <NavLink
+            className="nav-button"
             to="/user/1/weather"
           >
             Your Weather
-          </Link>,
+          </NavLink>,
         ],
       },
       "ref": null,
@@ -113,9 +122,10 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "class",
+          "nodeType": "function",
           "props": Object {
             "children": "Preferences",
+            "className": "nav-button",
             "to": "/user/1/preferences",
           },
           "ref": null,
@@ -125,9 +135,10 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "class",
+          "nodeType": "function",
           "props": Object {
             "children": "Commutes",
+            "className": "nav-button",
             "to": "/user/1/commutes",
           },
           "ref": null,
@@ -137,9 +148,10 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "class",
+          "nodeType": "function",
           "props": Object {
             "children": "Your Weather",
+            "className": "nav-button",
             "to": "/user/1/weather",
           },
           "ref": null,

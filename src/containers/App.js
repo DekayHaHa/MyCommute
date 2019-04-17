@@ -3,14 +3,14 @@ import { Route, Switch } from 'react-router-dom';
 import Login from './Login'
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { getUser } from '../thunks/getUser'
 import Header from './Header'
 // import NewUser from './NewUser'
 import UserCommutes from './UserCommutes'
 import UserWeather from './UserWeather'
 import UserPreferences from './UserPreferences'
-import { Home } from './Home'
-import { PageError } from './PageError'
+import { Home } from '../components/Home'
+import { PageError } from '../components/PageError'
+import '../styles/App.css'
 
 export class App extends Component {
 
@@ -35,16 +35,11 @@ export class App extends Component {
 }
 
 App.propTypes = {
-  user: PropTypes.object,
-  signinUser: PropTypes.func
+  user: PropTypes.object
 };
-
-export const mapDispatchToProps = (dispatch) => ({
-  getUser: () => dispatch(getUser()),
-});
 
 export const mapStateToProps = store => ({
   user: store.user
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(mapStateToProps)(App);

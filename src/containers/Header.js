@@ -3,7 +3,6 @@ import { Route } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { getUser } from '../thunks/getUser'
 import { signUserOut } from '../thunks/signUserOut'
 import UserNavBar from './UserNavBar'
 import moment from 'moment';
@@ -17,21 +16,19 @@ export class Header extends Component {
     return (
       <div className='main-header'>
         <div className='header'>
-          <h1 className='title' >MyCommute</h1>
+          <h1 className='title'>MyCommute</h1>
           <div className='current-weather'>
             {!user.id && <Link to='/login'>LOGIN USER</Link>}
             {currentWeather &&
               <div>
-                <h4>Hello, {user.userName}<Link to='/'><button onClick={() => signUserOut()}>SignOut</button></Link></h4>
+                <h4>Hello, {user.userName} <Link to='/'><button className='signout-btn' onClick={() => signUserOut()}>SignOut</button></Link></h4>
                 <p>Current as of {time}</p>
                 <p>{currentWeather.summary}</p>
                 <p>{currentWeather.temperature} F°</p>
               </div>}
           </div >
         </div>
-        <nav className='user-nav'>
-          <Route path={`/user/${user.id}`} component={UserNavBar} />
-        </nav>
+        <Route path={`/user/${user.id}`} component={UserNavBar} />
       </div>
     );
   }
@@ -39,17 +36,16 @@ export class Header extends Component {
 
 Header.propTypes = {
   user: PropTypes.object,
-  signinUser: PropTypes.func
+  signUserOut: PropTypes.func,
+  currentWeather: PropTypes.object
 };
 
 export const mapDispatchToProps = (dispatch) => ({
-  getUser: (name, pass) => dispatch(getUser(name, pass)),
   signUserOut: () => dispatch(signUserOut())
 });
 
 export const mapStateToProps = store => ({
   user: store.user,
-  error: store.error,
   currentWeather: store.weather.current
 });
 

@@ -39,63 +39,72 @@ ShallowWrapper {
           }
           to="/"
         />,
-        <Route
-          component={
-            Object {
-              "$$typeof": Symbol(react.memo),
-              "WrappedComponent": [Function],
-              "compare": null,
-              "displayName": "Connect(Login)",
-              "type": [Function],
-              Symbol(Symbol.hasInstance): [Function],
+        <Switch>
+          <Route
+            component={[Function]}
+            exact={true}
+            path="/"
+          />
+          <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "WrappedComponent": [Function],
+                "compare": null,
+                "displayName": "Connect(Login)",
+                "type": [Function],
+                Symbol(Symbol.hasInstance): [Function],
+              }
             }
-          }
-          exact={true}
-          path="/login"
-        />,
-        <Route
-          component={
-            Object {
-              "$$typeof": Symbol(react.memo),
-              "WrappedComponent": [Function],
-              "compare": null,
-              "displayName": "Connect(UserCommutes)",
-              "type": [Function],
-              Symbol(Symbol.hasInstance): [Function],
+            exact={true}
+            path="/login"
+          />
+          <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "WrappedComponent": [Function],
+                "compare": null,
+                "displayName": "Connect(UserCommutes)",
+                "type": [Function],
+                Symbol(Symbol.hasInstance): [Function],
+              }
             }
-          }
-          exact={true}
-          path="/user/1/commutes"
-        />,
-        <Route
-          component={
-            Object {
-              "$$typeof": Symbol(react.memo),
-              "WrappedComponent": [Function],
-              "compare": null,
-              "displayName": "Connect(UserPreferences)",
-              "type": [Function],
-              Symbol(Symbol.hasInstance): [Function],
+            exact={true}
+            path="/user/1/commutes"
+          />
+          <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "WrappedComponent": [Function],
+                "compare": null,
+                "displayName": "Connect(UserPreferences)",
+                "type": [Function],
+                Symbol(Symbol.hasInstance): [Function],
+              }
             }
-          }
-          exact={true}
-          path="/user/1/preferences"
-        />,
-        <Route
-          component={
-            Object {
-              "$$typeof": Symbol(react.memo),
-              "WrappedComponent": [Function],
-              "compare": null,
-              "displayName": "Connect(UserWeather)",
-              "type": [Function],
-              Symbol(Symbol.hasInstance): [Function],
+            exact={true}
+            path="/user/1/preferences"
+          />
+          <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "WrappedComponent": [Function],
+                "compare": null,
+                "displayName": "Connect(UserWeather)",
+                "type": [Function],
+                Symbol(Symbol.hasInstance): [Function],
+              }
             }
-          }
-          exact={true}
-          path="/user/1/weather"
-        />,
-        <Switch />,
+            exact={true}
+            path="/user/1/weather"
+          />
+          <Route
+            component={[Function]}
+          />
+        </Switch>,
       ],
       "className": "App",
     },
@@ -125,88 +134,180 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
-          "component": Object {
-            "$$typeof": Symbol(react.memo),
-            "WrappedComponent": [Function],
-            "compare": null,
-            "displayName": "Connect(Login)",
-            "type": [Function],
-            Symbol(Symbol.hasInstance): [Function],
-          },
-          "exact": true,
-          "path": "/login",
+          "children": Array [
+            <Route
+              component={[Function]}
+              exact={true}
+              path="/"
+            />,
+            <Route
+              component={
+                Object {
+                  "$$typeof": Symbol(react.memo),
+                  "WrappedComponent": [Function],
+                  "compare": null,
+                  "displayName": "Connect(Login)",
+                  "type": [Function],
+                  Symbol(Symbol.hasInstance): [Function],
+                }
+              }
+              exact={true}
+              path="/login"
+            />,
+            <Route
+              component={
+                Object {
+                  "$$typeof": Symbol(react.memo),
+                  "WrappedComponent": [Function],
+                  "compare": null,
+                  "displayName": "Connect(UserCommutes)",
+                  "type": [Function],
+                  Symbol(Symbol.hasInstance): [Function],
+                }
+              }
+              exact={true}
+              path="/user/1/commutes"
+            />,
+            <Route
+              component={
+                Object {
+                  "$$typeof": Symbol(react.memo),
+                  "WrappedComponent": [Function],
+                  "compare": null,
+                  "displayName": "Connect(UserPreferences)",
+                  "type": [Function],
+                  Symbol(Symbol.hasInstance): [Function],
+                }
+              }
+              exact={true}
+              path="/user/1/preferences"
+            />,
+            <Route
+              component={
+                Object {
+                  "$$typeof": Symbol(react.memo),
+                  "WrappedComponent": [Function],
+                  "compare": null,
+                  "displayName": "Connect(UserWeather)",
+                  "type": [Function],
+                  Symbol(Symbol.hasInstance): [Function],
+                }
+              }
+              exact={true}
+              path="/user/1/weather"
+            />,
+            <Route
+              component={[Function]}
+            />,
+          ],
         },
         "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "component": Object {
-            "$$typeof": Symbol(react.memo),
-            "WrappedComponent": [Function],
-            "compare": null,
-            "displayName": "Connect(UserCommutes)",
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "component": [Function],
+              "exact": true,
+              "path": "/",
+            },
+            "ref": null,
+            "rendered": null,
             "type": [Function],
-            Symbol(Symbol.hasInstance): [Function],
           },
-          "exact": true,
-          "path": "/user/1/commutes",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "component": Object {
-            "$$typeof": Symbol(react.memo),
-            "WrappedComponent": [Function],
-            "compare": null,
-            "displayName": "Connect(UserPreferences)",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "component": Object {
+                "$$typeof": Symbol(react.memo),
+                "WrappedComponent": [Function],
+                "compare": null,
+                "displayName": "Connect(Login)",
+                "type": [Function],
+                Symbol(Symbol.hasInstance): [Function],
+              },
+              "exact": true,
+              "path": "/login",
+            },
+            "ref": null,
+            "rendered": null,
             "type": [Function],
-            Symbol(Symbol.hasInstance): [Function],
           },
-          "exact": true,
-          "path": "/user/1/preferences",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "component": Object {
-            "$$typeof": Symbol(react.memo),
-            "WrappedComponent": [Function],
-            "compare": null,
-            "displayName": "Connect(UserWeather)",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "component": Object {
+                "$$typeof": Symbol(react.memo),
+                "WrappedComponent": [Function],
+                "compare": null,
+                "displayName": "Connect(UserCommutes)",
+                "type": [Function],
+                Symbol(Symbol.hasInstance): [Function],
+              },
+              "exact": true,
+              "path": "/user/1/commutes",
+            },
+            "ref": null,
+            "rendered": null,
             "type": [Function],
-            Symbol(Symbol.hasInstance): [Function],
           },
-          "exact": true,
-          "path": "/user/1/weather",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {},
-        "ref": null,
-        "rendered": null,
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "component": Object {
+                "$$typeof": Symbol(react.memo),
+                "WrappedComponent": [Function],
+                "compare": null,
+                "displayName": "Connect(UserPreferences)",
+                "type": [Function],
+                Symbol(Symbol.hasInstance): [Function],
+              },
+              "exact": true,
+              "path": "/user/1/preferences",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "component": Object {
+                "$$typeof": Symbol(react.memo),
+                "WrappedComponent": [Function],
+                "compare": null,
+                "displayName": "Connect(UserWeather)",
+                "type": [Function],
+                Symbol(Symbol.hasInstance): [Function],
+              },
+              "exact": true,
+              "path": "/user/1/weather",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "component": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
         "type": [Function],
       },
     ],
@@ -232,63 +333,72 @@ ShallowWrapper {
             }
             to="/"
           />,
-          <Route
-            component={
-              Object {
-                "$$typeof": Symbol(react.memo),
-                "WrappedComponent": [Function],
-                "compare": null,
-                "displayName": "Connect(Login)",
-                "type": [Function],
-                Symbol(Symbol.hasInstance): [Function],
+          <Switch>
+            <Route
+              component={[Function]}
+              exact={true}
+              path="/"
+            />
+            <Route
+              component={
+                Object {
+                  "$$typeof": Symbol(react.memo),
+                  "WrappedComponent": [Function],
+                  "compare": null,
+                  "displayName": "Connect(Login)",
+                  "type": [Function],
+                  Symbol(Symbol.hasInstance): [Function],
+                }
               }
-            }
-            exact={true}
-            path="/login"
-          />,
-          <Route
-            component={
-              Object {
-                "$$typeof": Symbol(react.memo),
-                "WrappedComponent": [Function],
-                "compare": null,
-                "displayName": "Connect(UserCommutes)",
-                "type": [Function],
-                Symbol(Symbol.hasInstance): [Function],
+              exact={true}
+              path="/login"
+            />
+            <Route
+              component={
+                Object {
+                  "$$typeof": Symbol(react.memo),
+                  "WrappedComponent": [Function],
+                  "compare": null,
+                  "displayName": "Connect(UserCommutes)",
+                  "type": [Function],
+                  Symbol(Symbol.hasInstance): [Function],
+                }
               }
-            }
-            exact={true}
-            path="/user/1/commutes"
-          />,
-          <Route
-            component={
-              Object {
-                "$$typeof": Symbol(react.memo),
-                "WrappedComponent": [Function],
-                "compare": null,
-                "displayName": "Connect(UserPreferences)",
-                "type": [Function],
-                Symbol(Symbol.hasInstance): [Function],
+              exact={true}
+              path="/user/1/commutes"
+            />
+            <Route
+              component={
+                Object {
+                  "$$typeof": Symbol(react.memo),
+                  "WrappedComponent": [Function],
+                  "compare": null,
+                  "displayName": "Connect(UserPreferences)",
+                  "type": [Function],
+                  Symbol(Symbol.hasInstance): [Function],
+                }
               }
-            }
-            exact={true}
-            path="/user/1/preferences"
-          />,
-          <Route
-            component={
-              Object {
-                "$$typeof": Symbol(react.memo),
-                "WrappedComponent": [Function],
-                "compare": null,
-                "displayName": "Connect(UserWeather)",
-                "type": [Function],
-                Symbol(Symbol.hasInstance): [Function],
+              exact={true}
+              path="/user/1/preferences"
+            />
+            <Route
+              component={
+                Object {
+                  "$$typeof": Symbol(react.memo),
+                  "WrappedComponent": [Function],
+                  "compare": null,
+                  "displayName": "Connect(UserWeather)",
+                  "type": [Function],
+                  Symbol(Symbol.hasInstance): [Function],
+                }
               }
-            }
-            exact={true}
-            path="/user/1/weather"
-          />,
-          <Switch />,
+              exact={true}
+              path="/user/1/weather"
+            />
+            <Route
+              component={[Function]}
+            />
+          </Switch>,
         ],
         "className": "App",
       },
@@ -318,88 +428,180 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "component": Object {
-              "$$typeof": Symbol(react.memo),
-              "WrappedComponent": [Function],
-              "compare": null,
-              "displayName": "Connect(Login)",
-              "type": [Function],
-              Symbol(Symbol.hasInstance): [Function],
-            },
-            "exact": true,
-            "path": "/login",
+            "children": Array [
+              <Route
+                component={[Function]}
+                exact={true}
+                path="/"
+              />,
+              <Route
+                component={
+                  Object {
+                    "$$typeof": Symbol(react.memo),
+                    "WrappedComponent": [Function],
+                    "compare": null,
+                    "displayName": "Connect(Login)",
+                    "type": [Function],
+                    Symbol(Symbol.hasInstance): [Function],
+                  }
+                }
+                exact={true}
+                path="/login"
+              />,
+              <Route
+                component={
+                  Object {
+                    "$$typeof": Symbol(react.memo),
+                    "WrappedComponent": [Function],
+                    "compare": null,
+                    "displayName": "Connect(UserCommutes)",
+                    "type": [Function],
+                    Symbol(Symbol.hasInstance): [Function],
+                  }
+                }
+                exact={true}
+                path="/user/1/commutes"
+              />,
+              <Route
+                component={
+                  Object {
+                    "$$typeof": Symbol(react.memo),
+                    "WrappedComponent": [Function],
+                    "compare": null,
+                    "displayName": "Connect(UserPreferences)",
+                    "type": [Function],
+                    Symbol(Symbol.hasInstance): [Function],
+                  }
+                }
+                exact={true}
+                path="/user/1/preferences"
+              />,
+              <Route
+                component={
+                  Object {
+                    "$$typeof": Symbol(react.memo),
+                    "WrappedComponent": [Function],
+                    "compare": null,
+                    "displayName": "Connect(UserWeather)",
+                    "type": [Function],
+                    Symbol(Symbol.hasInstance): [Function],
+                  }
+                }
+                exact={true}
+                path="/user/1/weather"
+              />,
+              <Route
+                component={[Function]}
+              />,
+            ],
           },
           "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "component": Object {
-              "$$typeof": Symbol(react.memo),
-              "WrappedComponent": [Function],
-              "compare": null,
-              "displayName": "Connect(UserCommutes)",
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "component": [Function],
+                "exact": true,
+                "path": "/",
+              },
+              "ref": null,
+              "rendered": null,
               "type": [Function],
-              Symbol(Symbol.hasInstance): [Function],
             },
-            "exact": true,
-            "path": "/user/1/commutes",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "component": Object {
-              "$$typeof": Symbol(react.memo),
-              "WrappedComponent": [Function],
-              "compare": null,
-              "displayName": "Connect(UserPreferences)",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "component": Object {
+                  "$$typeof": Symbol(react.memo),
+                  "WrappedComponent": [Function],
+                  "compare": null,
+                  "displayName": "Connect(Login)",
+                  "type": [Function],
+                  Symbol(Symbol.hasInstance): [Function],
+                },
+                "exact": true,
+                "path": "/login",
+              },
+              "ref": null,
+              "rendered": null,
               "type": [Function],
-              Symbol(Symbol.hasInstance): [Function],
             },
-            "exact": true,
-            "path": "/user/1/preferences",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "component": Object {
-              "$$typeof": Symbol(react.memo),
-              "WrappedComponent": [Function],
-              "compare": null,
-              "displayName": "Connect(UserWeather)",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "component": Object {
+                  "$$typeof": Symbol(react.memo),
+                  "WrappedComponent": [Function],
+                  "compare": null,
+                  "displayName": "Connect(UserCommutes)",
+                  "type": [Function],
+                  Symbol(Symbol.hasInstance): [Function],
+                },
+                "exact": true,
+                "path": "/user/1/commutes",
+              },
+              "ref": null,
+              "rendered": null,
               "type": [Function],
-              Symbol(Symbol.hasInstance): [Function],
             },
-            "exact": true,
-            "path": "/user/1/weather",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {},
-          "ref": null,
-          "rendered": null,
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "component": Object {
+                  "$$typeof": Symbol(react.memo),
+                  "WrappedComponent": [Function],
+                  "compare": null,
+                  "displayName": "Connect(UserPreferences)",
+                  "type": [Function],
+                  Symbol(Symbol.hasInstance): [Function],
+                },
+                "exact": true,
+                "path": "/user/1/preferences",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "component": Object {
+                  "$$typeof": Symbol(react.memo),
+                  "WrappedComponent": [Function],
+                  "compare": null,
+                  "displayName": "Connect(UserWeather)",
+                  "type": [Function],
+                  Symbol(Symbol.hasInstance): [Function],
+                },
+                "exact": true,
+                "path": "/user/1/weather",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "component": [Function],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
           "type": [Function],
         },
       ],

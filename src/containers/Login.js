@@ -32,22 +32,22 @@ export class Login extends Component {
       <div>
         {user.id && <Redirect to={`/user/${user.id}/commutes`} />}
         <form onSubmit={this.handleSubmit}>
-          <input
+          <input className='input-button'
             name='userName'
             type='text'
             value={userName}
             placeholder='USERNAME...'
             onChange={this.handleChange}
           />
-          <input
+          <input className='input-button'
             name='password'
             type='password'
             value={password}
             placeholder='PASSWORD...'
             onChange={this.handleChange}
           />
-          {error && <p>{error}</p>}
-          <button onClick={this.fetchData}>Sign In</button>
+          <button className='form-button' onClick={this.fetchData}>Sign In</button>
+          {error && <p className='input-error' >{error}</p>}
         </form>
       </div>
     );
@@ -56,7 +56,8 @@ export class Login extends Component {
 
 Login.propTypes = {
   user: PropTypes.object,
-  signinUser: PropTypes.func
+  getUser: PropTypes.func,
+  error: PropTypes.string
 };
 
 export const mapDispatchToProps = (dispatch) => ({

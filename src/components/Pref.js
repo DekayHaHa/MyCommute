@@ -2,7 +2,7 @@ import React from 'react'
 
 export const Pref = ({ title, temp, price, estimatedTime, priority }) => {
   return (
-    <div>
+    <div className='card-object'>
       <h2>Traveling by {title} is priority {priority}</h2>
       <p>When traveling by {title}...</p>
       <p>It costs {price}$</p>
