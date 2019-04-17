@@ -18,7 +18,7 @@ export class Header extends Component {
         <div className='header'>
           <h1 className='title'>MyCommute</h1>
           <div className='current-weather'>
-            {!user.id && <Link to='/login'>LOGIN USER</Link>}
+            {!user.id && <Link className='login-btn' to='/login'>LOGIN USER</Link>}
             {currentWeather &&
               <div>
                 <h4>Hello, {user.userName} <Link to='/'><button className='signout-btn' onClick={() => signUserOut()}>SignOut</button></Link></h4>
