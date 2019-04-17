@@ -11,8 +11,8 @@ export class UserWeather extends Component {
         <h3>Today's Weather: {weather.today.summary}</h3>
         <p>Temperature range from {weather.today.tempLow} to {weather.today.tempHigh}</p>
         <p>Average wind speed of {weather.today.avgWind}MPH, with gusts up to {weather.today.gusts}MPH</p>
-        <p>{weather.today.precipChance}% of {weather.today.precipType}</p>
-        <p>Humidity Index of {weather.today.humidity} (0 to 1)</p>
+        <p>{weather.today.precipChance * 100}% of {weather.today.precipType}</p>
+        <p>Humidity {weather.today.humidity * 100}%</p>
       </div>
     )
   }
