@@ -21,11 +21,11 @@ A web app for that provides users with recommended modes of travel based on User
 
 ## Moving Forward
 Priorites
--1 Test Backend
--2 Filter recommendations based on (Wind, Time, Traffic)
--3 Style/format user data containers
--4 Current weather every 15 min based on user loc
--5 Follow up with mobile version
+- 1 Test Backend
+- 2 Filter recommendations based on (Wind, Time, Traffic)
+- 3 Style/format user data containers
+- 4 Current weather every 15 min based on user loc
+- 5 Follow up with mobile version
 
 ## WireFrame
 <img width="961" alt="Screen Shot 2019-04-17 at 7 24 14 AM" src="https://user-images.githubusercontent.com/23220813/56291128-e658d400-60e1-11e9-9348-9ba2237f593c.png">
