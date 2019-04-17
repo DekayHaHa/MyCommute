@@ -9,6 +9,8 @@ import Header from './Header'
 import UserCommutes from './UserCommutes'
 import UserWeather from './UserWeather'
 import UserPreferences from './UserPreferences'
+import { Home } from './Home'
+import { PageError } from './PageError'
 
 export class App extends Component {
 
@@ -18,12 +20,14 @@ export class App extends Component {
       <div className="App">
         {/* {user.id && this.getUserWeather()} */}
         <Route to='/' component={Header} />
-        <Route exact path='/login' component={Login} />
-        <Route exact path={`/user/${user.id}/commutes`} component={UserCommutes} />
-        <Route exact path={`/user/${user.id}/preferences`} component={UserPreferences} />
-        <Route exact path={`/user/${user.id}/weather`} component={UserWeather} />
-        {/* <Route exact path='/newUser' component={NewUser} /> */}
         <Switch>
+          <Route exact path='/' component={Home} />
+          <Route exact path='/login' component={Login} />
+          <Route exact path={`/user/${user.id}/commutes`} component={UserCommutes} />
+          <Route exact path={`/user/${user.id}/preferences`} component={UserPreferences} />
+          <Route exact path={`/user/${user.id}/weather`} component={UserWeather} />
+          {/* <Route exact path='/newUser' component={NewUser} /> */}
+          <Route component={PageError} />
         </Switch>
       </div>
     );

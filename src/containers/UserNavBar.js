@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 // import { Route, Switch } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getUser } from '../thunks/getUser'
@@ -15,9 +15,9 @@ export class UserNavBar extends Component {
     const { user } = this.props
     return (
       <nav>
-        <Link to={`/user/${user.id}/preferences`}>Preferences</Link>
-        <Link to={`/user/${user.id}/commutes`}>Commutes</Link>
-        <Link to={`/user/${user.id}/weather`}>Your Weather</Link>
+        <NavLink className='nav-button' to={`/user/${user.id}/preferences`}>Preferences</NavLink>
+        <NavLink className='nav-button' to={`/user/${user.id}/commutes`}>Commutes</NavLink>
+        <NavLink className='nav-button' to={`/user/${user.id}/weather`}>Your Weather</NavLink>
       </nav>
     );
   }

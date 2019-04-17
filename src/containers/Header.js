@@ -4,28 +4,32 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getUser } from '../thunks/getUser'
+import { signUserOut } from '../thunks/signUserOut'
 import UserNavBar from './UserNavBar'
 import moment from 'moment';
+import '../styles/header.css'
 
 export class Header extends Component {
 
   render() {
-    const { user, currentWeather } = this.props
+    const { user, currentWeather, signUserOut } = this.props
     let time = currentWeather ? moment.unix(currentWeather.time).format('LT') : null;
     return (
-      <div className='header'>
-        <h1 className='title' >MyCommute</h1>
-        <div>
-          {!user.id && <Link to='/login'>LOGIN USER</Link>}
-          {currentWeather &&
-            <div>
-              <h4>Hello, {user.userName}</h4>
-              <p>Current as of {time}</p>
-              <p>{currentWeather.summary}</p>
-              <p>{currentWeather.temperature} F°</p>
-            </div>}
+      <div className='main-header'>
+        <div className='header'>
+          <h1 className='title' >MyCommute</h1>
+          <div className='current-weather'>
+            {!user.id && <Link to='/login'>LOGIN USER</Link>}
+            {currentWeather &&
+              <div>
+                <h4>Hello, {user.userName}<Link to='/'><button onClick={() => signUserOut()}>SignOut</button></Link></h4>
+                <p>Current as of {time}</p>
+                <p>{currentWeather.summary}</p>
+                <p>{currentWeather.temperature} F°</p>
+              </div>}
+          </div >
         </div>
-        <nav>
+        <nav className='user-nav'>
           <Route path={`/user/${user.id}`} component={UserNavBar} />
         </nav>
       </div>
@@ -39,7 +43,8 @@ Header.propTypes = {
 };
 
 export const mapDispatchToProps = (dispatch) => ({
-  getUser: (name, pass) => dispatch(getUser(name, pass))
+  getUser: (name, pass) => dispatch(getUser(name, pass)),
+  signUserOut: () => dispatch(signUserOut())
 });
 
 export const mapStateToProps = store => ({
