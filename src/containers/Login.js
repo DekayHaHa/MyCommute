@@ -56,7 +56,8 @@ export class Login extends Component {
 
 Login.propTypes = {
   user: PropTypes.object,
-  signinUser: PropTypes.func
+  getUser: PropTypes.func,
+  error: PropTypes.string
 };
 
 export const mapDispatchToProps = (dispatch) => ({

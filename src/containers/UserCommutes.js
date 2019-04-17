@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 // import { Route, Switch } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { getUser } from '../thunks/getUser'
 import { Commute } from '../components/Commute'
 
 export class UserCommutes extends Component {
@@ -45,12 +44,11 @@ export class UserCommutes extends Component {
 
 UserCommutes.propTypes = {
   user: PropTypes.object,
-  signinUser: PropTypes.func
+  error: PropTypes.string,
+  pref: PropTypes.object,
+  commutes: PropTypes.object,
+  weather: PropTypes.object
 };
-
-export const mapDispatchToProps = (dispatch) => ({
-  getUser: (name, pass) => dispatch(getUser(name, pass))
-});
 
 export const mapStateToProps = store => ({
   user: store.user,
@@ -60,4 +58,4 @@ export const mapStateToProps = store => ({
   weather: store.weather
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(UserCommutes);
+export default connect(mapStateToProps)(UserCommutes);

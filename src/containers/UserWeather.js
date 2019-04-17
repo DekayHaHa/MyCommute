@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { getUserWeather } from '../thunks/getUserWeather'
 
 
 export class UserWeather extends Component {
@@ -21,16 +20,12 @@ export class UserWeather extends Component {
 
 UserWeather.propTypes = {
   user: PropTypes.object,
-  signinUser: PropTypes.func
+  weather: PropTypes.object
 };
-
-export const mapDispatchToProps = dispatch => ({
-  getUserWeather: (id) => dispatch(getUserWeather(id))
-})
 
 export const mapStateToProps = state => ({
   user: state.user,
   weather: state.weather.today
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(UserWeather);
+export default connect(mapStateToProps)(UserWeather);

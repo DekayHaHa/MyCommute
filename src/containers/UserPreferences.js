@@ -33,7 +33,9 @@ export class UserPreferences extends Component {
 
 UserPreferences.propTypes = {
   user: PropTypes.object,
-  signinUser: PropTypes.func
+  error: PropTypes.string,
+  pref: PropTypes.object,
+  commutes: PropTypes.object
 };
 
 export const mapStateToProps = store => ({

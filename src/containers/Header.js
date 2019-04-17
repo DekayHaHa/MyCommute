@@ -3,7 +3,6 @@ import { Route } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { getUser } from '../thunks/getUser'
 import { signUserOut } from '../thunks/signUserOut'
 import UserNavBar from './UserNavBar'
 import moment from 'moment';
@@ -37,17 +36,16 @@ export class Header extends Component {
 
 Header.propTypes = {
   user: PropTypes.object,
-  signinUser: PropTypes.func
+  signUserOut: PropTypes.func,
+  currentWeather: PropTypes.object
 };
 
 export const mapDispatchToProps = (dispatch) => ({
-  getUser: (name, pass) => dispatch(getUser(name, pass)),
   signUserOut: () => dispatch(signUserOut())
 });
 
 export const mapStateToProps = store => ({
   user: store.user,
-  error: store.error,
   currentWeather: store.weather.current
 });
 
