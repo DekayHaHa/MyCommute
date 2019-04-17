@@ -1,68 +1,46 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# MyCommute
+A web app for that provides users with recommended modes of travel based on User Commutes and User Preferences. This can include but is not limited to modes of transportation(by priority), limited by temperature, wind speed, and remaining time left for arrival to user destination. 
 
-## Available Scripts
+- Devin Kapla - [GitHub](https://github.com/DekayHaHa) - [LinkedIn](https://www.linkedin.com/in/devinkapla/
 
-In the project directory, you can run:
+## Tech Stack
+- CSS
+- React
+- Redux
+- React Router
+- Jest & Enzyme
+- Node.js (Express)
+- Super Test
 
-### `npm start`
+## Install Instructions
+- Click [here](https://github.com/DekayHaHa/Commute-API)! Clone down backend
+- NPM install for backend
+- Clone down THIS repo
+- NPM install for frontend
+- NPM Start backend and then the frontend
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Moving Forward
+Priorites
+1 Test Backend
+2 Filter recommendations based on (Wind, Time, Traffic)
+3 Style/format user data containers
+4 Current weather every 15 min based on user loc
+5 Follow up with mobile version
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## WireFrame
+<img width="961" alt="Screen Shot 2019-04-17 at 7 24 14 AM" src="https://user-images.githubusercontent.com/23220813/56291128-e658d400-60e1-11e9-9348-9ba2237f593c.png">
 
-### `npm test`
+Mobile wireframe
+<img width="698" alt="Screen Shot 2019-04-17 at 7 24 33 AM" src="https://user-images.githubusercontent.com/23220813/56291152-f670b380-60e1-11e9-8383-f589978bf56d.png">
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Project SnapShots
+Main
+<img width="967" alt="Screen Shot 2019-04-17 at 7 28 48 AM" src="https://user-images.githubusercontent.com/23220813/56291410-78f97300-60e2-11e9-8d2b-1945438d767b.png">
 
-### `npm run build`
+<img width="1437" alt="Screen Shot 2019-04-17 at 7 26 47 AM" src="https://user-images.githubusercontent.com/23220813/56291287-3f286c80-60e2-11e9-9937-945b633083f1.png">
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<img width="1437" alt="Screen Shot 2019-04-17 at 7 26 27 AM" src="https://user-images.githubusercontent.com/23220813/56291304-4bacc500-60e2-11e9-8dce-d71768d6a8ff.png">
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
