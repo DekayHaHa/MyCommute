@@ -1,5 +1,5 @@
 import React from 'react'
-import { UserNavBar, mapDispatchToProps, mapStateToProps } from '../containers/UserNavBar'
+import { UserNavBar, mapStateToProps } from '../containers/UserNavBar'
 import { shallow } from 'enzyme'
 
 describe('UserNavBar', () => {
@@ -13,12 +13,20 @@ describe('UserNavBar', () => {
   })
 
   describe('map props', () => {
-    it.skip('should map state to props', () => {
-
-    })
-
-    it.skip('should map dispatch to props', () => {
-
+    it('should map state to props', () => {
+      const mockState = {
+        user: { id: 1, userName: 'mahk' },
+        error: 'im wrong',
+        pref: { id: 1 },
+        commutes: { id: 1 },
+        weather: { current: {} },
+        notMe: 'shouldnt show'
+      }
+      const expectedState = {
+        user: { id: 1, userName: 'mahk' }
+      }
+      const mappedProps = mapStateToProps(mockState);
+      expect(mappedProps).toEqual(expectedState);
     })
   })
 })

@@ -1,6 +1,9 @@
 import React from 'react'
-import { Header, mapDispatchToProps, mapStateToProps } from '../containers/Header'
+import { Header, mapStateToProps, mapDispatchToProps } from '../containers/Header'
 import { shallow } from 'enzyme'
+import { signUserOut } from '../thunks/signUserOut';
+
+jest.mock('../thunks/signUserOut')
 
 describe('Header', () => {
   let wrapper;
@@ -13,12 +16,29 @@ describe('Header', () => {
   })
 
   describe('map props', () => {
-    it.skip('should map state to props', () => {
-
+    it('should map state to props', () => {
+      const mockState = {
+        user: { id: 1, userName: 'mahk' },
+        error: 'im wrong',
+        pref: { id: 1 },
+        commutes: { id: 1 },
+        weather: { current: {} },
+        notMe: 'shouldnt show'
+      }
+      const expectedState = {
+        user: { id: 1, userName: 'mahk' },
+        currentWeather: {},
+      }
+      const mappedProps = mapStateToProps(mockState);
+      expect(mappedProps).toEqual(expectedState);
     })
 
-    it.skip('should map dispatch to props', () => {
-
+    it('should map dispatch to props', () => {
+      const mockDispatch = jest.fn();
+      const actionToDispatch = signUserOut()
+      const mappedProps = mapDispatchToProps(mockDispatch)
+      mappedProps.signUserOut()
+      expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch)
     })
   })
 })

@@ -8,11 +8,11 @@ export class UserWeather extends Component {
     const { weather } = this.props
     return (
       <div className='card-object'>
-        <h3>Today's Weather: {weather.summary}</h3>
-        <p>Temperature range from {weather.tempLow} to {weather.tempHigh}</p>
-        <p>Average wind speed of {weather.avgWind}MPH, with gusts up to {weather.gusts}MPH</p>
-        <p>{weather.precipChance}% of {weather.precipType}</p>
-        <p>Humidity Index of {weather.humidity} (0 to 1)</p>
+        <h3>Today's Weather: {weather.today.summary}</h3>
+        <p>Temperature range from {weather.today.tempLow} to {weather.today.tempHigh}</p>
+        <p>Average wind speed of {weather.today.avgWind}MPH, with gusts up to {weather.today.gusts}MPH</p>
+        <p>{weather.today.precipChance}% of {weather.today.precipType}</p>
+        <p>Humidity Index of {weather.today.humidity} (0 to 1)</p>
       </div>
     )
   }
@@ -25,7 +25,7 @@ UserWeather.propTypes = {
 
 export const mapStateToProps = state => ({
   user: state.user,
-  weather: state.weather.today
+  weather: state.weather
 });
 
 export default connect(mapStateToProps)(UserWeather);
