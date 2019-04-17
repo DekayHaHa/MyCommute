@@ -17,21 +17,19 @@ export class Header extends Component {
     return (
       <div className='main-header'>
         <div className='header'>
-          <h1 className='title' >MyCommute</h1>
+          <h1 className='title'>MyCommute</h1>
           <div className='current-weather'>
             {!user.id && <Link to='/login'>LOGIN USER</Link>}
             {currentWeather &&
               <div>
-                <h4>Hello, {user.userName}<Link to='/'><button onClick={() => signUserOut()}>SignOut</button></Link></h4>
+                <h4>Hello, {user.userName} <Link to='/'><button className='signout-btn' onClick={() => signUserOut()}>SignOut</button></Link></h4>
                 <p>Current as of {time}</p>
                 <p>{currentWeather.summary}</p>
                 <p>{currentWeather.temperature} F°</p>
               </div>}
           </div >
         </div>
-        <nav className='user-nav'>
-          <Route path={`/user/${user.id}`} component={UserNavBar} />
-        </nav>
+        <Route path={`/user/${user.id}`} component={UserNavBar} />
       </div>
     );
   }

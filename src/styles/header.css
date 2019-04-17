@@ -1,8 +1,16 @@
 .header {
-
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  background: #3D3D3F;
+  color: #7DCE94;
+  padding: 10px;
+}
+
+nav {
+  padding: 10px;
+  background: #3D3D3F;
+  border: 2px solid #7DCE94;
 }
 
 .nav-button {
@@ -10,6 +18,7 @@
   text-decoration: none;
   font-size: 30px;
   color: black;
+  color: #7DCE94;
 }
 
 .current-weather, p ,h4 {

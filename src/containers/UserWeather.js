@@ -8,7 +8,7 @@ export class UserWeather extends Component {
   render() {
     const { weather } = this.props
     return (
-      <div>
+      <div className='card-object'>
         <h3>Today's Weather: {weather.summary}</h3>
         <p>Temperature range from {weather.tempLow} to {weather.tempHigh}</p>
         <p>Average wind speed of {weather.avgWind}MPH, with gusts up to {weather.gusts}MPH</p>

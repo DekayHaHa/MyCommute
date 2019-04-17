@@ -1,15 +1,9 @@
 import React, { Component } from 'react';
-// import { Route, Switch } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { getUser } from '../thunks/getUser'
 
 export class UserNavBar extends Component {
-
-  componentDidMount() {
-
-  }
 
   render() {
     const { user } = this.props
@@ -25,16 +19,10 @@ export class UserNavBar extends Component {
 
 UserNavBar.propTypes = {
   user: PropTypes.object,
-  signinUser: PropTypes.func
 };
 
-export const mapDispatchToProps = (dispatch) => ({
-  getUser: (name, pass) => dispatch(getUser(name, pass))
-});
-
 export const mapStateToProps = store => ({
-  user: store.user,
-  error: store.error
+  user: store.user
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(UserNavBar);
+export default connect(mapStateToProps)(UserNavBar);

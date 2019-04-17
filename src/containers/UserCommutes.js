@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getUser } from '../thunks/getUser'
-import { Commute } from './Commute'
+import { Commute } from '../components/Commute'
 
 export class UserCommutes extends Component {
 
@@ -36,7 +36,7 @@ export class UserCommutes extends Component {
   render() {
     const { weather } = this.props
     return (
-      <div>
+      <div className='container'>
         {weather.today && this.checkPref()}
       </div>
     );

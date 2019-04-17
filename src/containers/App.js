@@ -9,8 +9,9 @@ import Header from './Header'
 import UserCommutes from './UserCommutes'
 import UserWeather from './UserWeather'
 import UserPreferences from './UserPreferences'
-import { Home } from './Home'
-import { PageError } from './PageError'
+import { Home } from '../components/Home'
+import { PageError } from '../components/PageError'
+import '../styles/App.css'
 
 export class App extends Component {
 

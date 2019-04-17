@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types';
-import { Pref } from './Pref'
+import { Pref } from '../components/Pref'
 
 
 export class UserPreferences extends Component {
@@ -24,7 +24,7 @@ export class UserPreferences extends Component {
   render() {
     const { pref } = this.props
     return (
-      <div>
+      <div className='container'>
         {pref.id && this.renderPrefs(pref)}
       </div>
     )
